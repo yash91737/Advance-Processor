@@ -1,0 +1,19 @@
+ data segment
+x dw 3333h
+y dw 2222h  
+z dw ?
+ data ends
+
+code segment
+    assume cs:code , ds:data
+start:    
+ mov ax,data
+ mov ds,ax
+ mov ax,x
+ mov bx,y
+ div y
+code ends
+end start
+
+
+
